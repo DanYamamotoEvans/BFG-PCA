@@ -63,9 +63,8 @@ It will also output some csv files for plotting stats.
 ### Performance measure
 Based on the normalized scores, this notebook computes the agreement against the BioGRID database. It will compute the agreement for various percentile values of the PPI scores generated from multiple replicates.
 
-
 ### Visualization
-This notebook will help you plot the data you obtained from the BFG screening. Please go to the visualization page in the wiki for more details on the plots.
+This notebook will help you plot the data you obtained from the BFG screening. 
 
 ### References
 - [Yachie _et al_, 2016](https://www.embopress.org/doi/full/10.15252/msb.20156660) / Initial report of BFG. The codes here were built based on perl scripts provided from [Dr. Nozomu Yachie](http://yachie-lab.org/?nozomuyachie).
