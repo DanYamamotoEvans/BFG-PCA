@@ -59,7 +59,7 @@ When performing an experiment involving a complex pool of strains, you do not wa
 
 
 ### Barcode calling
-This notebook creates the BLAST databse based on your barcode database file, and performs BLAST on the fastq files you provide. The results will be parsed to combine the count data. Please look at the wiki for input file specifications.
+This notebook creates the BLAST databse based on your barcode database file, and performs BLAST on the fastq files you provide. The results will be parsed to combine the count data. 
 
 #### Input files
 
