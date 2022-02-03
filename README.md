@@ -53,8 +53,17 @@ This script was built to perform experimental plans and data analysis for Barcod
 ### Monte-carlo simulation of BFG screening proccess
 Since BFG screenings have multiple sampling steps while handling a complex pool of strains, we suimulate the sampling process with a Monte-Carlo simulation. This notebook follows the procedures of BFG screenings, and allows the user to estimate the nessesary paramaters for sampling. 
 
+#### What the simulation does
+When performing an experiment involving a complex pool of strains, you do not want to have any bottle necks. For example, if you have 100 strains in a flask and take only 10 cells, the chance of covering all strains are impossible. In the monte-carlo simulation provided, you can input your number of strains and see how much cells you should carry over to the next step until the sequence library preparation. Parameters are based on values in Yachie et al (2016).
+![photo](https://danyamamotoevans.github.io/materials/rand_sampling.png)        
+
+
 ### Barcode calling
 This notebook creates the BLAST databse based on your barcode database file, and performs BLAST on the fastq files you provide. The results will be parsed to combine the count data. Please look at the wiki for input file specifications.
+
+#### Input files
+
+
 
 ### Normalization
 This notebook normalizes the count data, and compute raw PPI signals based on the barcode counts in the control condition and auto-activity level.
