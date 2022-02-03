@@ -61,7 +61,7 @@ This notebook normalizes the count data, and compute raw PPI signals based on th
 It will also output some csv files for plotting stats.
 
 ### Performance measure
-Based on the normalized scores, this notebook computes the agreement against the BioGRID database. It willcomute the agreement for various percentile values of the PPI scores generated from multiple replicates.
+Based on the normalized scores, this notebook computes the agreement against the BioGRID database. It will compute the agreement for various percentile values of the PPI scores generated from multiple replicates.
 
 
 ### Visualization
