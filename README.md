@@ -62,7 +62,27 @@ When performing an experiment involving a complex pool of strains, you do not wa
 This notebook creates the BLAST databse based on your barcode database file, and performs BLAST on the fastq files you provide. The results will be parsed to combine the count data. 
 
 #### Input files
+**Barcode database file (csv)**
+A csv file with ORF and barcode information. It should have the following information. Please refer to [test file](https://github.com/DanYamamotoEvans/BFG-PCA/blob/main/barcode_database/test/test_database.csv) for example.
+    - Tag type (DHFR12 or DHFR3)
+    - Category of ORF (DHFR12_XX or DHFR3_XX)
+    - ORF Internal ID (DHFR12_001 ...)
+    - ORF symbol. The deafult script will use 'Official Symbol Interactor' in the [BioGRID](https://thebiogrid.org/) downloads. Please refer to BioGRID data below.
+    - Barcoe replicate (BC1, BC2...)
+    - Barcode 1 sequence
+    - Barcode 2 sequence
 
+**Index association file for demultiplexing (csv)**
+A csv file with library information and used illumina custom indecies. It should have the following information. Please refer to [test file](https://github.com/DanYamamotoEvans/BFG-PCA/blob/main/barcode_database/test/test_tag.csv) for example.
+    - Index (In order of Plate tag1 - Plate tag 2). Please see [list of custom index](https://github.com/DanYamamotoEvans/BFG-PCA/blob/main/bar2num.csv) as reference. Full information on primers are available in Yachie et al and/or Evans-Yamamoto et al. References at bottom of page.
+    - Screening name
+    - Conditon (has to be unique)
+    - Screening replicate (if only one, put Rep1)
+    - Experiment name
+    - Control condition which is corresponding to this sample. By putting a * at the end it will be registered as the control condition for score normalizaition.
+
+**BioGRID data**
+Please go to the [BioGRID database](https://thebiogrid.org/), and to the [downloads page](https://downloads.thebiogrid.org/BioGRID). Go to curent release, and download your desired dataset in the tab3 format (e.g. BIOGRID-ALL-X.X.XXX.tab3.zip). 
 
 
 ### Normalization
@@ -73,7 +93,7 @@ It will also output some csv files for plotting stats.
 Based on the normalized scores, this notebook computes the agreement against the BioGRID database. It will compute the agreement for various percentile values of the PPI scores generated from multiple replicates.
 
 ### Visualization
-This notebook will help you plot the data you obtained from the BFG screening. 
+This notebook will help you plot the basic stats of your data from the BFG screening. 
 
 ### References
 - [Yachie _et al_, 2016](https://www.embopress.org/doi/full/10.15252/msb.20156660) / Initial report of BFG. The codes here were built based on perl scripts provided from [Dr. Nozomu Yachie](http://yachie-lab.org/?nozomuyachie).
