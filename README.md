@@ -54,6 +54,7 @@ Since BFG screenings have multiple sampling steps while handling a complex pool 
 
 #### What the simulation does
 When performing an experiment involving a complex pool of strains, you do not want to have any bottle necks. For example, if you have 100 strains in a flask and take only 10 cells, the chance of covering all strains are impossible. In the monte-carlo simulation provided, you can input your number of strains and see how much cells you should carry over to the next step until the sequence library preparation. Parameters are based on values in Yachie et al (2016).
+
 ![photo](https://danyamamotoevans.github.io/materials/rand_sampling.png)        
 
 
